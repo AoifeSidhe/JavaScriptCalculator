@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title> 
+    <meta name="title" content="Calculator">
+    <meta name="author" content="Alita Sidhe">
+    <meta name="description" content="my calculator">
+    <meta name="keywords" content="calculator, js, html, css">
+    <link rel="icon" type="image/png" href="npro.png">
+
+<!--     <link rel="stylesheet" href="style1080.css"> -->
+<!--     <link rel="stylesheet" href="style2k.css"> -->
+  <!--   <link rel="stylesheet" href="style1080.css"> -->
+
+<!--     <link rel="stylesheet" href="style1080.css"  media="screen and (max-width: 2559px)"> -->
+
+<!-- Load this CSS file for screen resolutions less than 2K -->
+<!-- <link rel="stylesheet" href="style1080.css" media="screen and (max-width: 2559px)" > -->
+
+<!-- Load this CSS file for all other screen resolutions -->
+<!-- <link rel="stylesheet" href="style2k.css"  media="screen and (min-width: 2560px)"> -->
+
+<!-- <link rel="stylesheet" type="text/css" href="style1080.css"> -->
+<link rel="stylesheet" type="text/css" href="style1080.css" media="(max-width: 2559px)">
+<link rel="stylesheet" type="text/css" href="style2k.css" media="(min-width: 2560px)">
+<!-- <link rel="stylesheet" type="text/css" href="style2k.css" media="(min-height: 1440px)">
+ -->
+
+</head>
+
+    
+<style>
+/*   quick fix */
+</style>
+
+</head>
+<body>
+
+    <div class="calcontainer">
+<!--       container for calculator-->                  
+          <div class="calctext">
+            <!-- text for calculator -->
+                <p class = "text1">
+<span class="calchead">Calculator.</span>
+<br>
+                    A calculator widget is a simple but essential tool
+                    that can be found on many devices such as smartphones, tablets,
+                    laptops, and desktop computers.
+                    The purpose of a calculator widget is to perform basic
+                    arithmetic operations, such as addition, subtraction,
+                     multiplication, and division, quickly and accurately.
+            <br>
+            Whether you're a student, a teacher, an engineer, a scientist, or
+             someone who needs to balance their checkbook, the calculator 
+             widget can come in handy.
+            <br>
+            One of the advantages of a calculator widget is that it saves time and reduces
+             errors. With a calculator widget, you don't need to perform calculations 
+             manually or mentally, which can be time-consuming and prone to errors. 
+             The widget does the calculations for you, and you can get the results instantly,
+              which makes it a reliable and efficient tool.
+            <br>
+            In conclusion, a calculator widget is a useful tool that has been designed 
+            to help people perform basic arithmetic operations quickly and accurately.
+                </p>
+<!-- <p>test paragraph</p> -->
+<!-- <hr id="hr1"> -->
+<!-- horizontal line #1 -->
+            </div>
+  
+            <div class = "Rectangle1">
+              <!--     *Rectangle1 - calc body -->
+                <div class = "Rectangle2">
+                  <!--     *Rectangle2 - calc header -->
+                    <p class="calcheader">My calculator</p>
+                </div>
+                <!-- <div style="display: flex; height: 60px; font-size: 57px; max-width: 700px; flex-shrink: 0" id="headerflex"> -->
+                  <div id="headerflex"> 
+         <!--            flex for header -->
+                    <div id="displayprison">
+                      <div id="display" class="myDisplay">
+                      </div>
+                    </div>
+               </div>
+                <div id="flexbox1">
+                  <!-- flexbox1 - calculator body without the header -->
+                <div id="calcbuttons">
+                  <!-- calculator buttons =) -->
+                    <button id="clear">AC</button>
+                    <button id="eraser" class="eraser">Del</button>
+                    <button id="plus-minus"><span id="pmct">&minus;</span></button>
+                    <button id="divide" class="operator">/</button>
+            
+                    <button id="one" class="number">1</button>
+                    <button id="two" class="number">2</button>
+                    <button id="three" class="number">3</button>
+                    <button id="multiply"class="operator">*</button>
+            
+                    <button id="four" class="number">4</button>
+                    <button id="five" class="number">5</button>
+                    <button id="six" class="number">6</button>
+                    <button id="subtract" class="operator">-</button>
+            
+                    <button id="seven" class="number">7</button>
+                    <button id="eight" class="number">8</button>
+                    <button id="nine" class="number">9</button>
+                    <button id="add" class="operator">+</button>
+            
+                    <button id="zero" class="number">0</button>
+                    <button id="dot" class="dot">.</button>
+                    <button id="equals" class="widebutton" disabled>=</button>
+                  </div>
+                </div>
+            </div>
+    </div>
+
+<!-- first horizontal line  -->
+<div class="hr1container"><hr class="hr2"></div>
+
+<!-- percents  calculator -->
+
+<div id="secondcalccenter">
+  <div class = "secondcalc">
+  
+   <!-- === 1st row === -->
+  
+             <!--  Input # -->
+                <div class="scgitem">
+                  <div style="margin-right: 10px;">
+                    <label for="number-input">X</label>
+                </div>
+                 <input type="number" id="number-input" name="number" step="any" placeholder="Enter Number">
+                </div>
+  
+                 <!--  Input % -->
+                <div class="scgitem">
+                  <div style="margin-right: 8px;">
+                    <label for="percent-input">%</label>
+                </div>
+                <input type="number" name="percents" id="percent-input" step="any" placeholder="Enter % value">
+                          </div>
+  
+                 <!--  Insert button1 -->
+                <div class="scgitem">
+                  <button type ="button" id ="perinsb" onclick= "insertvalue()">Insert last number from calculator display</button>
+                </div>
+  
+                <!-- Calculate button1 -->
+                <div class="scgitem">
+                  <button type="button" id="percal" onclick="calculatep()">Calculate % for entered number</button>
+      <!--  <button type="button" id="percal">Find % of your number</button> -->
+                </div>
+  
+                  <!--  Result 1 -->
+                <div class="scgitem">
+                  <div id="perresult">Awaiting instructions</div>
+                </div>
+  
+             <!--    reset button -->
+                <div class="scgitem tallitem">
+                 <button id="resetpercalcb" onclick="resetpercalc()">RESET ALL</button>
+                </div>
+  
+            <!-- === 2nd row === -->
+  
+           <!--  X Number -->
+            <div class="scgitem">
+              <div style="margin-right: 10px;">
+                <label for="number-input2">X</label>
+            </div>
+             <input type="number" id="number-input2" name="number" step="any" placeholder="Enter Number X">
+          </div>
+  
+        <!--   Y Number -->
+          <div class="scgitem">
+            <div style="margin-right: 10px;">
+              <label for="number-input3">Y</label>
+          </div>
+          <input type="number" name="number" id="number-input3" step="any" placeholder="Enter Number Y">
+          </div>
+  
+          <!-- Insert Value for X -->
+            <div class="scgitem">
+              <button type ="button" id ="perinsb2" class ="insertbutton2-3"
+              onclick= "insertvalueX()">Insert X as last number from calculator display</button>
+            </div>
+  
+  
+      <!--     Calculate Relative Percentage -->
+          <div class="scgitem">
+         <button id="percal2" onclick="calculatep2()" >
+          Calculate relative %<br>(X is a% fron Y) </button>
+          </div>
+  
+         <!--  2nd result -->
+          <div class="scgitem">
+            <div id="perresult2">Awaiting instructions</div>
+          </div>
+  
+            <!--  === 3rd row=== -->
+  
+              <!--   1 -->
+            <div class="scgitem">
+              </div>
+  
+             <!--  3rd left border -->
+              <div class="scgitem">
+                <div class="rounded-rectangle"></div>
+                </div>
+  
+               <!--  Insert button Y -->
+                <div class="scgitem roundb">
+                  <button type ="button" id ="perinsb3" class="insertbutton2-3" onclick= "insertvalueY()">
+                    Insert Y as last number from cal display
+                  </button>
+                  </div>
+  
+             <!--      3rd right border -->
+                  <div class="scgitem">
+                    <div class="rounded-rectangle2"></div>
+                    </div>
+
+                       <!-- 5 -->
+                    <div class="scgitem">
+                      </div>
+        </div>
+      </div>
+</div>
+
+<!-- second horizontal line  -->
+<div class="hr2container"><hr class="hr2"></div>
+
+<!-- comtainer for centering thr randomiser -->
+<div class="rand-center">
+
+<!-- randomiser container -->  
+<div class="rand-container">
+    <div class="button-cellrgeneration">
+      <!--  random values for inputs -->
+      <button id="generateinsert-button3r" onclick= "insertvalueRMiMax()">Random Min and Max</button>
+    </div>
+    <div class="input-cellr">
+      <!-- min input -->
+      <label for="min-input">Min Number:</label>
+      <input type="number" id="min-input3r">
+    </div>
+    <div class="input-cellr">
+      <!-- max input -->
+      <label for="max-input">Max Number:</label>
+      <input type="number" id="max-input3r" step="1" min="0"> 
+    </div>
+    <div class="button-cellr">
+      <!-- Randomiser button =) -->
+      <button id="generate-buttonon" disabled>Generate</button>
+    </div>
+    <div class="result-cellr">
+      <!-- result -->
+      <p id="resultrand">Awaiting instructions!</p>
+    </div>
+    <div class="button-randreset">
+      <!-- reset -->
+      <button id="resetrand3r">Reset!</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+<!--   footer with copyrigh
+ -->  <p>&copy; Aoife Sidhe 2023</p>
+</footer>
+
+<!-- technical part for debugging -->
+<div id="display2" hidden></div>
+
+<!-- script =) -->
+<script src = "calc.js">
+</script>
+
+</body>
+</html>

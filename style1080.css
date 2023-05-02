@@ -1,0 +1,814 @@
+body
+/* body of the page*/
+{
+background-color: rgb(233, 233, 233);  
+}
+
+
+.Rectangle1
+/* main calculaor body */
+
+{
+    position: absolute;
+    width: 590px;
+    height: 880px;
+    margin-top: 30px;
+    left: 66%;
+    background: #000000;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+.Rectangle2
+/* calculator header */
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 94%;
+    background: #D9D9D9;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center; /* centers vertically */
+  }
+
+  #headerflex
+/* header flex =) */
+  {
+    display: flex; 
+    height: 60px; 
+    font-size: 57px; 
+    max-width: 700px; 
+    flex-shrink: 0;
+  }
+
+
+ body p.calcheader 
+ /* text for calc header */
+ {
+   font-size: 28px;
+    color: rgb(0, 0, 0);
+ }
+
+
+.calcontainer
+/* the whole block with descripion and calculator */
+{
+    display: flex;
+    flex-wrap: wrap;
+  /*   margin-top: 2%; */
+}
+
+.calctext
+/* description block for calc */
+{  
+  max-width: 60%;
+  /*   margin-top: 2%; */
+    margin-left: 2%;
+    font-size: 42px;
+    text-align: center;
+    flex-direction: column; /* to add something under */
+    display: flex;
+    justify-content: center;  /* centers horizontaly */
+    align-items: center; /* centers vertically, no effect */
+  /*   height: 900px; */
+}
+
+p.text1
+/* description text */
+{   
+   margin-top: 10px;
+    padding: 20px;
+    background-color: rgba(165, 191, 191, 0.224);
+}
+
+#calcbuttons 
+/* buttons on grid */
+{
+    display: grid;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 28%;
+    grid-template-rows: repeat(5, 124px);
+    grid-template-columns: repeat(4, 124px);
+    padding: 12px;
+    border: dashed #d9d9d90d;
+  }
+
+
+.calcontainer .widebutton 
+/*   wide button - 2 columns 
+important to tag it within calcontainer and not alone*/
+  {
+      grid-column: span 2;
+      background-color: blueviolet;
+      border-radius: 10px;
+      margin: 5px;
+}
+
+.calcontainer .widebutton:hover
+/* widebutton (=) hover */
+{
+  background-color: rgb(255, 0, 195);
+}
+
+.calcontainer .widebutton:disabled
+/* widebutton disabled */
+{
+  background-color: rgb(255, 0, 0);
+}
+
+ .calcontainer button 
+/* ordinary buttons */
+  {
+background-color: rgba(128, 128, 128, 0.293);
+border: none;
+border-radius: 50%;
+margin: 5px;
+color: white;
+font-size: 32px;
+}
+
+#calcbuttons .number:hover 
+/* hover for number buttons */
+{
+    border: 2px solid #00ff1e;
+    box-sizing: border-box;
+}
+
+
+#calcbuttons .number:disabled
+/* disabled for number buttons */
+{
+  color: #766c6c;
+  pointer-events: none;
+}
+
+.operator:disabled
+/* disabled for operators */
+{
+  color: #766c6c;
+  pointer-events: none;
+  background-color: #a73075 !important;
+
+}
+
+.eraser:disabled,
+.dot:disabled
+/* disabled for dot and eraser */
+{
+  color: #766c6c !important;
+  pointer-events: none;
+}
+
+#equals:disabled
+/* disabled for = */
+{
+  color: rgba(237, 104, 104, 0.643);
+}
+
+/* styling for span - has coresponding part in calc.js */
+
+#pmct 
+/* defaut */
+{
+  color: rgb(255, 255, 255) !important;
+}
+
+#pmct.disabled 
+/* disabled */
+{
+  color: #766c6c !important;
+}
+
+#flexbox1
+/* box for buttons */
+{
+display: flex;
+justify-content: center;
+}
+
+#calcbuttons button:nth-child(4),
+#calcbuttons button:nth-child(8),
+#calcbuttons button:nth-child(12),
+#calcbuttons button:nth-child(16)
+/* /,*,-,+  buttons style */
+{
+margin: 5px;
+background-color: blueviolet;
+}
+
+#calcbuttons button:nth-child(4):hover,
+#calcbuttons button:nth-child(8):hover,
+#calcbuttons button:nth-child(12):hover,
+#calcbuttons button:nth-child(16):hover
+/* /,*,-,+  buttons style hover */
+{
+  background-color: rgb(255, 0, 195);
+}
+
+#calcbuttons button:nth-child(1),
+#calcbuttons button:nth-child(2),
+#calcbuttons button:nth-child(3)
+/* ac, delete, plus minus */
+/* (i hate plus minus) */
+{
+margin: 5px;
+/* background-color: rgba(255, 11, 11, 0.502); */
+background-color: rgba(255, 11, 11, 0.62);
+}
+
+#calcbuttons button:nth-child(1):hover,
+#calcbuttons button:nth-child(2):hover,
+#calcbuttons button:nth-child(3):hover
+/* ac, delete, plus minus hover */
+{
+  background-color: #ff0000;
+}
+
+#calcbuttons button:nth-child(1):disabled,
+#calcbuttons button:nth-child(2):disabled,
+#calcbuttons button:nth-child(3):disabled
+/* ac, delete, plus minus disabled */
+{
+  background-color: #685353;
+}
+
+#calcbuttons button:nth-child(17),
+#calcbuttons button:nth-child(18)
+/* 0 and .buttons */
+{
+margin: 5px;
+background-color: rgba(121, 108, 117, 0.746);
+}
+
+#calcbuttons button:nth-child(17):hover,
+#calcbuttons button:nth-child(18):hover
+/* 0 and .buttons hover*/
+{
+border: 2px solid #00ff1e;
+box-sizing: border-box;
+}
+
+ 
+#displayprison
+/* parent for display */
+{
+  display: flex;
+}
+
+#display 
+/* calcdisplay */
+{
+position: absolute;
+left: 5%;
+right: 5%;
+top: 10%;
+height: 120px;
+max-width: 90%;
+color: rgb(2, 252, 48);
+background: rgba(255, 255, 255, 0.073);
+
+/* 2nd part */
+
+display: flex; 
+align-items: center;
+flex-direction: row;
+justify-content: flex-end; 
+max-width: 680px; 
+flex-shrink: 0;
+text-align: right;
+padding-left: 7px;
+padding-right: 15px;
+overflow: hidden;
+}
+
+/* removing arrows for input number */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+    appearance: none;
+}
+
+  #hr1
+/* line */
+{
+    width: 600px;
+    margin-left: -30px;
+}
+
+.calchead
+/* header for calc text */
+{
+font-weight: bold;
+font-size: 50px;
+}
+
+/* === second calc === */
+
+.secondcalc
+/* main body */
+{
+display: grid;
+align-content: center;
+grid-template-rows: 100px
+100px
+100px;
+grid-template-columns:
+240px
+215px
+340px
+/* 360px */
+260px
+420px
+200px;
+padding: 12px;
+/* max-width: 72%; */
+/* width: calc(100% - 250px); */
+
+}
+
+#secondcalccenter
+/* centering div */
+{
+  display: flex;
+  justify-content: center;
+/*   max-width: 76%; */
+}
+
+.scgitem
+/* grid cell  */
+{
+  background-color: #000000;
+  /* border: 1px solid rgb(255, 255, 255); to see grid */
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  box-sizing: border-box;
+}
+
+#number-input,
+#number-input2,
+#percent-input,
+#number-input3
+/* inputs */
+{
+  font-size: 24px;
+/*   font-size: 124px; test input*/
+  text-align: right; 
+  padding-right: 5px;
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: azure;
+/*   color: rgb(250, 0, 0);  test color */
+  background-color: rgba(255, 255, 255, 0.152);
+}
+
+#number-input::placeholder,
+#percent-input::placeholder, 
+#number-input2::placeholder,
+#number-input3::placeholder
+/* placeholders for imputs */
+{
+  color: rgba(255, 255, 255, 0.708);
+  font-size: 16px;
+  text-align: right; 
+  padding-right: 5px;
+/*   text-align: right !important; */
+}
+
+label[for="number-input"],
+label[for="number-input2"],
+label[for="number-input3"],
+label[for="percent-input"]  
+/* label for inputs */
+{
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+#perinsb
+/* first insert button */
+{
+margin: 15px;
+color: #D9D9D9;
+/* max-height: 100%; */
+font-size: 24px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: blueviolet;
+border-radius: 10px;
+border: none;
+padding: 5px;
+}
+
+
+#percent-input
+/* percent inputt */
+{
+  width: 150px;
+/*   height: 52px; */
+}
+
+#perresult,
+#perresult2
+/* results */
+{
+  text-align: center;
+  font-size: 42px;
+  color: greenyellow;
+}
+
+.scgitem:nth-child(5),
+.scgitem:nth-child(11) 
+/* green line */
+{
+  padding-right: 1px;
+/*  box-sizing: border-box; */
+ border-left: #15ff00 1px solid;
+}
+
+.tallitem
+/* reset button grid cell*/
+{
+  grid-row: span 2; 
+}
+
+#resetpercalcb
+/* reset button style */
+{
+  width: 180px;
+  height: 180px;
+  border: none;
+  cursor: pointer;
+  background-color: red;
+  color: azure;
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+
+.scgitem:nth-child(6)
+/* grid round edge */
+{
+  border-bottom-right-radius: 30%;
+}
+
+.scgitem:nth-child(12),
+.scgitem:nth-child(16)
+/*  transparent cells  */
+/* .scgitem:nth-child(13) */
+{
+background-color:transparent;
+}
+
+.scgitem:nth-child(13)
+/* black edge */
+{
+  background-color: rgb(0, 0, 0);
+}
+
+.rounded-rectangle 
+/* styling element */
+{
+background-color: rgb(233, 233, 233);
+border-top-right-radius: 10px;
+min-height: 100%;
+min-width: 100%;
+}
+
+.rounded-rectangle2 
+/* styling element */
+{
+  background-color: rgb(233, 233, 233);
+  border-top-left-radius: 20%;
+  /* border-bottom-left-radius: 50%; */
+  min-height: 100%;
+  margin: 40px;
+  min-width: 100%;
+  }
+
+#percal
+/* 1st calculate button */
+{
+/* margin: 15px; */
+width: 86%;
+color: #D9D9D9;
+/* max-height: 100%; */
+font-size: 24px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: blueviolet;
+/* margin-right: 30px; */
+border-radius: 10px;
+border: none;
+padding: 5px;
+margin-left: 15px;
+}
+
+.scgitem:nth-child(4)
+/* 1st calculate button grid */
+{
+justify-content: flex-start; /* centers horizontally */
+align-items: center; /* centers vertically */
+}
+
+.scgitem:nth-child(14)
+/* round edges */
+{
+border-bottom-left-radius: 20%;
+border-bottom-right-radius: 20%;
+   }
+
+
+   .insertbutton2-3
+/* insert buttons 2-3 */
+   {
+    margin: 15px;
+color: #D9D9D9;
+max-height: 100%;
+font-size: 24px;  
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: blueviolet;
+border-radius: 10px;
+border: none;
+padding: 5px;
+   }
+
+  #perinsb3
+  /* round edges for 3rd insert button */
+   {
+    /* margin-top: 25px; */
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+   }
+
+   body #percal2
+   /* 2nd calculate button */
+   {
+    /* display: none; */
+    margin: 15px;
+    color: #D9D9D9;
+    max-height: 100%;
+    font-size: 24px;  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: blueviolet;
+    border-radius: 10px;
+    border: none;
+    min-height: 1005;
+    padding: 5px;
+   }
+
+/* #percal2:hover{
+  background-color: #15ff00;
+} */
+
+#perinsb:disabled,
+#perinsb2:disabled,
+#perinsb3:disabled,
+#percal:disabled,
+#percal2:disabled
+/* disabled style for buttons */
+{
+  background-color: #787272df;
+}
+
+.hr2container 
+/* container for line positioning */
+{
+  margin-top: 30px;
+  display: flex;
+/*   max-width: 72%;
+  margin-left: 2%; */
+  justify-content: center;
+}
+
+.hr1container 
+/* container for line positioning */
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+/*   max-width: 72%;
+  margin-left: 2%; */
+  justify-content: center;
+}
+
+.hr2 
+/* 2nd horizontal line */
+{
+/*   width: 800px;   */
+  width: 600px;
+  max-width: 600px;
+/*   height: 2px;
+  background-color: black; */
+}
+
+                         /*  === Randomiser ===   */
+
+.rand-container 
+/* grid for randomiser */
+{
+  display: grid;
+ /*  grid-gap: none; */
+  /* border: none !important; */
+  border: #000000 15px solid;
+grid-template-rows: 100px;
+grid-template-columns:
+200px  /* - generate random values for inputs button */
+400px  /* - min input */
+400px  /* - max input */
+150px  /* - generate button */
+410px  /* - output value */
+100px; /* - reset button */
+background: #000000;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.input-cellr 
+/* .result-cellr */
+/* randomiser box for inputs */
+{
+  display: flex;
+  flex-direction: column;  /* this sets the main axis of the flex container to be vertical, so the child elements are stacked on top of each other */
+  justify-content: center; /* this centers the child elements along the main axis */
+  align-items: center;     /* this centers the child elements along the cross axis */
+/*   border: 1px solid #000000; */
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: none !important;
+}
+
+.button-cellr 
+/* .result-cellr */ 
+/* randomiser box for buttons */
+{
+  display: flex;
+  flex-direction: column;  /* this sets the main axis of the flex container to be vertical, so the child elements are 
+  stacked on top of each other */
+  justify-content: center; /* this centers the child elements along the main axis */
+  align-items: center;     /* this centers the child elements along the cross axis */
+/*   border: 1px solid #000000; */
+/*   padding: 10px; */
+border: none !important;
+}
+
+.result-cellr
+/* container for randomiser result*/
+ {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: nowrap;
+  height: 100%; /* set a height for the container */
+}
+
+.rand-container button 
+/* Randomiser buttons */  
+ {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #4CAF50;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 32px;
+  border: none;
+  outline: none !important;
+  box-sizing: border-box;
+  cursor: pointer;
+ 
+}
+
+.rand-container > .button-cellr > #generate-buttonon:hover 
+/* hover style for Generate! randomiser buttom */
+{
+  background-color: rgb(0, 255, 0);
+}
+  
+.rand-container > .button-cellr > #generate-buttonon:disabled 
+/*disabled style for Generate! randomiser buttom */
+{
+  background-color: #ff0000;
+}
+
+.input-cellr label 
+/* randomiser input labels */
+{
+  margin: 0;
+  font-size: 32px;
+}
+
+.input-cellr input[type=number]
+/* randomiser inputs */
+{
+  min-height: 70%;
+  max-height: 70%;
+  min-width: 100%;
+  max-width: 100%;
+  font-size: 24px;
+  text-align: right;
+  padding-right: 5px;
+  border: none;
+  color: azure;
+  background-color: rgba(255, 255, 255, 0.152);
+
+}
+
+p#resultrand
+/* randomiser result */
+{
+color: #00ff1e;
+font-size: 38px;
+}
+/* parts from old design - bottom of the box */
+/* margin-top: auto;
+padding-bottom: 6px;
+} */
+
+
+
+.scgitem:nth-child(3) button,
+.scgitem:nth-child(4) button,
+.scgitem:nth-child(9) button,
+.scgitem:nth-child(10) button,
+.scgitem:nth-child(14) button
+/* pointers for mainbuttons */
+{
+  cursor: pointer;
+}
+
+.rand-center
+/* positioning of randomiser */
+{
+  display: flex;
+ /*  border: #00ff1e 10px solid;  to see box*/
+  justify-content: center;
+  align-items: center;
+/*   max-width: 76%; */
+}
+
+.rand-center .rand-container .input-cellr label
+/* labels */
+{
+color: #D9D9D9;
+}
+
+
+button#resetrand3r
+/* randomiser reset button */
+{
+  background-color: #ff0000;
+}
+
+button#resetrand3r:hover
+/* randomiser reset button hover animation*/
+{
+  position: relative;
+  min-width: 120%;
+  min-height: 120%;
+  transform: translate(10%, -10%); /* X and Y */
+}
+
+button#generateinsert-button3r:hover 
+/* generate inserts hover */
+{
+  background-color: #00700b;
+}
+
+
+footer
+/* foooter */
+{
+  background-color: #01000005;
+  text-align: end;
+  padding: 10px;
+  margin-top: 20px;
+/*   margin-left: 2%; */
+}
+
+footer p
+/* footer text */
+{
+  color: #ff0000;
+  margin: 0;
+ /*  padding-right: 130px; */
+/*   max-width: 72%; */
+    font-size: 22px;
+}
